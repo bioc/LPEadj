@@ -8,7 +8,7 @@
 \usage{getCols(labels)}
 
 \arguments{
-\item{labels} {character vector showing whether each column is control or
+\item{labels}{character vector showing whether each column is control or
           treatment.  It is assumed that the columns are ordered, the
           first n1 reps are control the next n2 reps are treatment}
   }
