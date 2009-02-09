@@ -79,9 +79,19 @@ lpeAdj <- function(dat, labels=NULL, doMax=FALSE, doAdj=TRUE, q=.01) {
 
     # get number of replicates in both groups
     if(!is.null(labels)) {
-        labs <- getCols(labels)
-        rep1 <- labs[1]
-        rep2 <- labs[2]
+  
+        labs <- unique(labels)
+        if(length(labs) !=2) {
+           cat("ERROR: There must be two groups in data. ", length(labs),
+               "groups found.\n")
+           stop()
+        }
+
+        groupIndex <- labels == labs[1]
+        dat <- cbind(dat[,groupIndex], dat[,!groupIndex])
+
+        rep1 <- sum(labels == labs[1])
+        rep2 <- sum(labels == labs[2])
 
         # make sure labels matches the data matrix in size
         if(rep1 + rep2 != cols) {
@@ -93,7 +103,7 @@ lpeAdj <- function(dat, labels=NULL, doMax=FALSE, doAdj=TRUE, q=.01) {
         print("ERROR: labels is NULL.")
         stop()
     }
-    
+
     # empirically based adjustments for 3-10 replicates, The first two values
     # are for reps 1 and 2.  In those cases LPE uses a different algorithm
     # and no adjustment is made.  The correct adjustment value can be fetched
@@ -120,7 +130,7 @@ lpeAdj <- function(dat, labels=NULL, doMax=FALSE, doAdj=TRUE, q=.01) {
 
     # run LPE
     if(doAdj) {
-        cat("variance adjustment values used - group 1: ", adj1, " group 2",
+        cat("variance adjustment values used: group 1: ", adj1, " group 2",
             adj2, "\n")
         results <- calculateLpeAdj(dat[,1:rep1],dat[,(rep1+1):cols],var1,var2,
                                    probe.set.name=c(1:p), adjust1=adj1,
@@ -348,26 +358,4 @@ adjBaseOlig.error.step2 <- function (y, baseOlig.error.step1.res, df = 10,
 }
 
 
-
-
-
-#
-# Get number of replicates from character vector
-#
-# labels - character vector showing whether each column is control or
-#          treatment.  It is assumed that the columns are ordered, the
-#          first n1 reps are control the next n2 reps are treatment
-# Return vector of length two which are the number of reps for the first
-# second group.
-#
-getCols <- function(labels) {
-   if(is.null(labels)) {
-      stop("Missing values in labels")
-   }
-  
-   labs <- unique(labels)
-   rep1 <- sum(labels==labs[1])
-   rep2 <- sum(labels == labs[2])
-   return(c(rep1, rep2))
-}
 
