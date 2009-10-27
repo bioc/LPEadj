@@ -1,5 +1,5 @@
 Package: LPEadj
-Version: 1.6.0
+Version: 1.7.0
 Date: 2008-02-12
 Title: A correction of the local pooled error (LPE) method to replace the asymptotic variance adjustment with an unbiased adjustment based on sample size.
 Author: Carl Murie <carl.murie@mcgill.ca>, Robert Nadon <robert.nadon@mcgill.ca>
