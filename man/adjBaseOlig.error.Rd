@@ -58,8 +58,7 @@ Jain et. al. (2005) \emph{Rank-invariant resampling based estimation of false di
 
 \examples{
 
-  # Loading the library and the data
-  library(LPEadj)
+  # Loading the data from the LPE library
   data(Ley)
   
   dim(Ley)

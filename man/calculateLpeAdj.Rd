@@ -46,7 +46,7 @@
 
 \details{
   The LPE test statistic numerator is the difference in medians between the
-  two experimental conditions. The test statistic denominator is the combined pooled standard error for the two experimental conditions obtained by looking up the var.M from each baseOlig.error variance function. The conversion to p-values is based on the Gaussian distribution for difference if order statistics (medians). The user may select bith the smoother degrees of freedom (smaller is smoother) and the trim percent to obtain a variance fucntion to suit particular 
+  two experimental conditions. The test statistic denominator is the combined pooled standard error for the two experimental conditions obtained by looking up the var.M from each baseOlig.error variance function. The conversion to p-values is based on the Gaussian distribution for difference if order statistics (medians). The user may select both the smoother degrees of freedom (smaller is smoother) and the trim percent to obtain a variance function to suit particular 
 issues i.e. variability of genes with low expression intensity. The
 default values for the adjustment of the variances of the two groups is
 the asymptotically correct value of pi/2.  This value is biased at small sample
@@ -77,8 +77,7 @@ Jain et. al. (2005) \emph{Rank-invariant resampling based estimation of false di
 
 \examples{
    
- # Loading the library and the data
- library(LPEadj)
+ # Loading the data from the LPE library
  data(Ley)
 
  ADJ.VALUES <- c(1, 1, 1.34585905516761 ,1.19363228146169 ,1.436849413109

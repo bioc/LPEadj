@@ -65,9 +65,8 @@ Jain et. al. (2005) \emph{Rank-invariant resampling based estimation of false di
 
 \examples{
    
- # Loading the library and null dataset (two groups with three
+ # Creating a null dataset (two groups with three
  # replicates each)
- library(LPEadj)
  dat <- matrix(rnorm(6000), ncol=6)
  
  # Applying LPE

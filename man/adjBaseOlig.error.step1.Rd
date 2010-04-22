@@ -2,7 +2,7 @@
 \alias{adjBaseOlig.error.step1}
 
 \title{
- Evaluates LPE variance function of M for quantiles of A within and experimental condition by divinding the A in 100 intervals.
+ Evaluates LPE variance function of M for quantiles of A within and experimental condition by dividing the A in 100 intervals.
 }
 
 \description{
@@ -61,8 +61,7 @@ Jain et. al. (2005) \emph{Rank-invariant resampling based estimation of false di
 
 \examples{
 
-  # Loading the library and the data
-  library(LPEadj)
+  # Loading the data from the LPE library
   data(Ley)
   
   dim(Ley)
