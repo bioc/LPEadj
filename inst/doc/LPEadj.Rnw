@@ -6,9 +6,7 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{hyperref}
-\usepackage{natbib}
 \usepackage{url}
-\usepackage{natbib}
 \usepackage{isorot}
 \usepackage{epsfig}
 \usepackage{fullpage} % standard 1 inch margins 
@@ -124,7 +122,7 @@ where
 \end{equation}
 
 $\sigma^2_i(Med_i)$ are the variances derived from the calibration
-curve using the median of the gene intensites for a particular group.
+curve using the median of the gene intensities for a particular group.
 $n$ is the number of replicates in the groups (assuming equal sample
 size).  The associated probability of the z-statistic
 under the null hypothesis is calculated by reference to the standard
@@ -157,7 +155,7 @@ converges to $\pi/2$ when the sample size is
 large, around 100,  but is less than $\pi/2$ when the sample sizes are small, 
 from three to ten.  The ratio of variances at small sample sizes also 
 oscillates lower to higher depending on whether the sample size is even or
-odd.  This fluctutation 
+odd.  This fluctuation 
 is due to the difference in obtaining the median with even and
 odd sample sizes.  The middle value of the ordered
 distribution is used as the median with odd sample sizes while the mean of
@@ -192,10 +190,10 @@ $c_2$ are the adjust1 and adjust2 variables in the calculateLpeAdj function.
   \includegraphics[]{fig//FPRPvalHist10Reps4.jpg}
 \caption{(a) False positive rates for the LPE and adjusted LPE methods using
   simulated data with no differentially expressed genes evaluated at p $\le$ .05
-  threshold.  The LPE showed variable and low false positive rates.  In contrast, the adjusted LPE showed
-  appropriate false positive rate for all sample sizes. (b) The adjusted LPE,
-  but not the LPE, shows the theoretically expected uniform p-value
-  distribution.
+  threshold.  The LPE showed variable and low false positive rates.  In contrast,
+  the adjusted LPE showed appropriate false positive rate for all sample sizes.
+  (b) The adjusted LPE, but not the LPE, shows the theoretically expected
+  uniform p-value distribution.
   Each data set had 10000 genes with each gene's replicate
   intensity drawn from a $N(\mu, 0.1)$ distribution.  $\mu$ was drawn from a
   $N(7,1)$ distribution. } 
@@ -220,20 +218,21 @@ In contrast, the adjusted LPE test produced theoretically expected values.
 \centering
 \includegraphics[]{fig//HGU95GreyScale1.jpg}
 \caption{P-value histograms and boxplots of FPR, TPR, and pAUC from the
-  LPE and adjusted LPE methods applied to the HGU95 latin square data set. The data were normalized using
-  six different normalization methods (labeled by row). \vspace{-5mm}}
+  LPE and adjusted LPE methods applied to the HGU95 latin square data set.
+  The data were normalized using six different normalization methods
+  (labeled by row). \vspace{-5mm}}
 \label{fig:Power}
 \end{figure}
 
 Figure \ref{fig:Power} summarizes the results of the LPE and adjusted LPE
-methods applied to the HGU95 Affymetrix spike-in data set (www.affymetrx.com). The HGU95 data is
-based on a 14 x 14 Latin Square design of ``spiked-in'' 
+methods applied to the HGU95 Affymetrix spike-in data set (www.affymetrx.com).
+The HGU95 data is based on a 14 x 14 Latin Square design of ``spiked-in'' 
 transcripts (14 concentrations per microarray chip x 14 groups) with
 three replicates for each group.  The
 concentrations for the ``spiked-in'' transcripts were doubled for
 each consecutive group (0 and 0.25 to 1024 pM inclusive).  To assess the
 performance of the statistical tests we used the FPR, the true positive rate
-(TPR, which is the proportion of transcipts correctly identified as being
+(TPR, which is the proportion of transcripts correctly identified as being
 differentially expressed), and the  
 partial area under the curve (pAUC, which measures the area
 under a Receiver Operator Characteristic curve (ROC) below a false positive
@@ -323,8 +322,3 @@ Murie et.\ al.
 \end{thebibliography}
 
 \end{document}
-
-
-
-
-
