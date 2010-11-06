@@ -15,4 +15,4 @@ Description: Two options are added to the LPE algorithm. The original LPE
     adjustment based on sample size rather than pi/2.  By default the LPEadj
     uses the sample size based variance adjustment.
 License: LGPL
-biocViews: Microarray, Bioinformatics, Differential Expression, Proteomics
+biocViews: Microarray, Bioinformatics, Proteomics
