@@ -1,18 +1,20 @@
 Package: LPEadj
-Version: 1.23.1
+Version: 1.23.2
 Date: 2010-04-21
-Title: A correction of the local pooled error (LPE) method to replace the
-    asymptotic variance adjustment with an unbiased adjustment based on
-    sample size.
-Author: Carl Murie <carl.murie@mcgill.ca>, Robert Nadon <robert.nadon@mcgill.ca>
-Maintainer: Carl Murie <carl.murie@mcgill.ca> 
+Title: A correction of the local pooled error (LPE) method to replace
+        the asymptotic variance adjustment with an unbiased adjustment
+        based on sample size.
+Author: Carl Murie <carl.murie@mcgill.ca>, Robert Nadon
+        <robert.nadon@mcgill.ca>
+Maintainer: Carl Murie <carl.murie@mcgill.ca>
 Depends: LPE
 Imports: LPE, stats
-Description: Two options are added to the LPE algorithm. The original LPE
-    method sets all variances below the max variance in the ordered
-    distribution of variances to the maximum variance. in LPEadj this option
-    is turned off by default.  The second option is to use a variance
-    adjustment based on sample size rather than pi/2.  By default the LPEadj
-    uses the sample size based variance adjustment.
+Description: Two options are added to the LPE algorithm. The original
+        LPE method sets all variances below the max variance in the
+        ordered distribution of variances to the maximum variance. in
+        LPEadj this option is turned off by default.  The second option
+        is to use a variance adjustment based on sample size rather
+        than pi/2.  By default the LPEadj uses the sample size based
+        variance adjustment.
 License: LGPL
-biocViews: Microarray, Bioinformatics, Proteomics
+biocViews: Microarray, Proteomics
