@@ -1,5 +1,5 @@
 Package: LPEadj
-Version: 1.61.0
+Version: 1.61.1
 Date: 2010-04-21
 Title: A correction of the local pooled error (LPE) method to replace
         the asymptotic variance adjustment with an unbiased adjustment
@@ -18,3 +18,4 @@ Description: Two options are added to the LPE algorithm. The original
         variance adjustment.
 License: LGPL
 biocViews: Microarray, Proteomics
+PackageStatus: Deprecated
